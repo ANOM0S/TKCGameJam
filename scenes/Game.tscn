@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://ceourlne88r2k"]
 
-[node name="Node2D" type="Node2D" unique_id=1079949632]
+[ext_resource type="Texture2D" uid="uid://6vreqcc7xb8n" path="res://assets/temp/grass.png" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://e5i384mtewod" path="res://assets/temp/CATERPILAR_STAND.png" id="2_yqjtg"]
+
+[node name="Game" type="Node2D" unique_id=1310251541]
+
+[node name="Camera" type="Camera2D" parent="." unique_id=151029701]
+anchor_mode = 0
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=277430586]
+z_index = -1
+texture = ExtResource("1_uwrxv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1440, 1080)
+
+[node name="Caterpillar" type="Sprite2D" parent="." unique_id=2003625996]
+position = Vector2(256, 856)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_yqjtg")
