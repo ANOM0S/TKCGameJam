@@ -40,8 +40,10 @@ radius = 56.0
 height = 192.0
 
 [node name="Caterpillar" type="CharacterBody2D" unique_id=1370927661]
+input_pickable = true
 motion_mode = 1
 script = ExtResource("1_7lqn1")
+bugType = 2
 speed = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1232545983]

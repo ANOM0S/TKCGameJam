@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 
+@export var bugType: Enums.type
 @export var speed = 30.0
 @export var speed_multiplier = 100.0
 
@@ -12,12 +13,14 @@ var current_state: state = state.IDLE
 
 @onready var timer: Timer = $Timer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var game_manager: Node = %GameManager
 
 
 func _ready() -> void:
 	_choose_new_direction()
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
+	input_event.connect(_on_input_event)
 
 
 func _process(_delta: float) -> void:
@@ -42,6 +45,18 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_wall():
 		_choose_new_direction()
+
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			collect()
+
+
+## removes the bug and adds score in game manager
+func collect():
+	game_manager.add_point(bugType)
+	queue_free()
 
 
 ## sets direction to a randomly rotated normalized Vector2

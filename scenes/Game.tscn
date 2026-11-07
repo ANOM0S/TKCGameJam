@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ceourlne88r2k"]
 
+[ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://scripts/game_manager.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://assets/temp/grass_prototype.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dpc1wbwtvuvii" path="res://scenes/bugs/caterpillar.tscn" id="2_yqjtg"]
 
@@ -10,6 +11,10 @@ size = Vector2(1440, 32)
 size = Vector2(32, 816)
 
 [node name="Game" type="Node2D" unique_id=1310251541]
+
+[node name="GameManager" type="Node" parent="." unique_id=602831503]
+unique_name_in_owner = true
+script = ExtResource("1_lnu2h")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=151029701]
 anchor_mode = 0
