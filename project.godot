@@ -13,7 +13,7 @@ config_version=5
 config/name="TKCGameJam"
 run/main_scene="uid://ceourlne88r2k"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://assets/temp/default_icon.svg"
+config/icon="res://Assets/temp/default_icon.svg"
 
 [display]
 
