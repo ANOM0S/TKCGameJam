@@ -17,7 +17,6 @@ config/icon="res://Assets/temp/default_icon.svg"
 
 [autoload]
 
-
 SaveManager="*uid://b6711qacr1uox"
 Upgrades="*uid://udogfg7efm21"
 Enums="*uid://dgoyiidt1xvd4"
