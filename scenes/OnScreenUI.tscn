@@ -1,9 +1,132 @@
 [gd_scene format=3 uid="uid://cl04guwdih0nf"]
 
+[ext_resource type="Texture2D" uid="uid://cb6wljdyx81w0" path="res://Assets/bugs/Ant/ANT_STAND.png" id="1_rhb7p"]
+[ext_resource type="Script" uid="uid://gvj1vds64n0y" path="res://Scripts/on_screen_ui.gd" id="1_v8uxx"]
+[ext_resource type="Texture2D" uid="uid://bntxnfrk6g23j" path="res://Assets/bugs/Beetle/BEETLESTAND.png" id="2_v8uxx"]
+[ext_resource type="Texture2D" uid="uid://c70cd4bnxmfgw" path="res://Assets/bugs/Caterpillar/CAT_STAND.PNG" id="3_scvy2"]
+[ext_resource type="Texture2D" uid="uid://fyd5aqgfw2mp" path="res://Assets/bugs/Snail/SNAILSTAND.png" id="4_8pp7m"]
+[ext_resource type="Texture2D" uid="uid://bkq64nqo8lwfp" path="res://Assets/bugs/Moth/MOTH1.png" id="5_mko7d"]
+[ext_resource type="Texture2D" uid="uid://dcc6n2404f3mc" path="res://Assets/bugs/Earthworm/WORM4.png" id="6_wm87m"]
+
 [node name="OnScreenUI" type="Control" unique_id=878809337]
+custom_minimum_size = Vector2(1440, 1080)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_v8uxx")
+
+[node name="OnScreenUI" type="MarginContainer" parent="." unique_id=1722721736]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Bugs" type="HBoxContainer" parent="OnScreenUI" unique_id=1180157853]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Ant" type="HBoxContainer" parent="OnScreenUI/Bugs" unique_id=637557912]
+layout_mode = 2
+
+[node name="Ant" type="TextureRect" parent="OnScreenUI/Bugs/Ant" unique_id=1873806563]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("1_rhb7p")
+expand_mode = 1
+
+[node name="AntAmount" type="Label" parent="OnScreenUI/Bugs/Ant" unique_id=1099754463]
+layout_mode = 2
+text = "0"
+
+[node name="Beetle" type="HBoxContainer" parent="OnScreenUI/Bugs" unique_id=1866433542]
+layout_mode = 2
+
+[node name="Beetle" type="TextureRect" parent="OnScreenUI/Bugs/Beetle" unique_id=1432080246]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("2_v8uxx")
+expand_mode = 1
+
+[node name="BeetleAmount" type="Label" parent="OnScreenUI/Bugs/Beetle" unique_id=1594035363]
+layout_mode = 2
+text = "0"
+
+[node name="Caterpillar" type="HBoxContainer" parent="OnScreenUI/Bugs" unique_id=1143314403]
+layout_mode = 2
+
+[node name="Caterpilar" type="TextureRect" parent="OnScreenUI/Bugs/Caterpillar" unique_id=1939440169]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_scvy2")
+expand_mode = 1
+
+[node name="CaterpillarAmount" type="Label" parent="OnScreenUI/Bugs/Caterpillar" unique_id=813052005]
+layout_mode = 2
+text = "0"
+
+[node name="Snail" type="HBoxContainer" parent="OnScreenUI/Bugs" unique_id=822139946]
+layout_mode = 2
+
+[node name="Snail" type="TextureRect" parent="OnScreenUI/Bugs/Snail" unique_id=607250017]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("4_8pp7m")
+expand_mode = 1
+
+[node name="SnailAmount" type="Label" parent="OnScreenUI/Bugs/Snail" unique_id=1721440871]
+layout_mode = 2
+text = "0"
+
+[node name="Moth" type="HBoxContainer" parent="OnScreenUI/Bugs" unique_id=94072559]
+layout_mode = 2
+
+[node name="Moth" type="TextureRect" parent="OnScreenUI/Bugs/Moth" unique_id=273772051]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("5_mko7d")
+expand_mode = 1
+
+[node name="MothAmoubt" type="Label" parent="OnScreenUI/Bugs/Moth" unique_id=1985397376]
+layout_mode = 2
+text = "0"
+
+[node name="Earthworm" type="HBoxContainer" parent="OnScreenUI/Bugs" unique_id=82063680]
+layout_mode = 2
+
+[node name="Earthworm" type="TextureRect" parent="OnScreenUI/Bugs/Earthworm" unique_id=1254974384]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("6_wm87m")
+expand_mode = 1
+
+[node name="EarthwormAmount" type="Label" parent="OnScreenUI/Bugs/Earthworm" unique_id=1891051994]
+layout_mode = 2
+text = "0"
+
+[node name="PauseButton" type="Button" parent="OnScreenUI" unique_id=1268861861]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="CaugchCooldown" type="ColorRect" parent="OnScreenUI" unique_id=1953694477]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="OnScreenUI" unique_id=1360158990]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Time left: x"

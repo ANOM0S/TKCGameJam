@@ -15,6 +15,11 @@ run/main_scene="uid://ceourlne88r2k"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/temp/default_icon.svg"
 
+[autoload]
+
+SaveManager="*uid://b6711qacr1uox"
+Upgrades="*uid://udogfg7efm21"
+
 [display]
 
 window/size/viewport_width=1440

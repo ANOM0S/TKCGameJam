@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://h3ebetipjyfd"]
 
+[ext_resource type="Script" uid="uid://c83ds28nqi175" path="res://Scripts/menu_ui.gd" id="1_811wr"]
+
 [node name="MenuUI" type="Control" unique_id=1308173404]
+custom_minimum_size = Vector2(1440, 1080)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_811wr")
 
 [node name="MainMenu" type="MarginContainer" parent="." unique_id=969612447]
 layout_mode = 1
@@ -48,21 +52,26 @@ custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+text = "New Game"
 
 [node name="Continue" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/MenuOptions" unique_id=486351269]
 custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+text = "Continue
+"
 
 [node name="Settings" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/MenuOptions" unique_id=321164929]
 custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+text = "Settings"
 
 [node name="Exit" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/MenuOptions" unique_id=129564644]
 custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+text = "Exit"

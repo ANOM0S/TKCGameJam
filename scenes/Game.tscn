@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://ceourlne88r2k"]
 
-[ext_resource type="Texture2D" uid="uid://6vreqcc7xb8n" path="res://assets/temp/grass.png" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://e5i384mtewod" path="res://assets/temp/CATERPILAR_STAND.png" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://hh1748e0ngci" path="res://Scripts/Game.gd" id="1_j5yw3"]
+[ext_resource type="Texture2D" uid="uid://6vreqcc7xb8n" path="res://Assets/temp/grass.png" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://e5i384mtewod" path="res://Assets/temp/CATERPILAR_STAND.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://Scenes/OnScreenUI.tscn" id="4_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://Scenes/PauseUI.tscn" id="5_7lihs"]
+[ext_resource type="PackedScene" uid="uid://cw3wws6ypn6vl" path="res://Scenes/ShopUI.tscn" id="6_7lihs"]
 
 [node name="Game" type="Node2D" unique_id=1310251541]
+script = ExtResource("1_j5yw3")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=151029701]
 anchor_mode = 0
@@ -19,3 +24,21 @@ region_rect = Rect2(0, 0, 1440, 1080)
 position = Vector2(263, 847)
 scale = Vector2(0.33867186, 0.33867186)
 texture = ExtResource("2_yqjtg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1538844628]
+
+[node name="OnScreenUI" parent="CanvasLayer" unique_id=878809337 instance=ExtResource("4_b2bpf")]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 4.0
+offset_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PauseUI" parent="CanvasLayer" unique_id=1519703332 instance=ExtResource("5_7lihs")]
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 3.0
+offset_bottom = -2.0
+
+[node name="ShopUI" parent="CanvasLayer" unique_id=1808726926 instance=ExtResource("6_7lihs")]
