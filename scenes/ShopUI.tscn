@@ -22,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.26413724, 0.4236925, 0.21025395, 1)
 
 [node name="ShopMenu" type="MarginContainer" parent="." unique_id=1933900836]
@@ -32,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 150
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 150

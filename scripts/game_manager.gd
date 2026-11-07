@@ -1,6 +1,5 @@
 extends Node
 
-
 var scores = { }
 
 signal scored(amount: int, bug: Enums.type)

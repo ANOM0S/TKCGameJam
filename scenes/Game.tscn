@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://ceourlne88r2k"]
 
-[ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://scripts/game_manager.gd" id="1_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://assets/temp/grass_prototype.png" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dpc1wbwtvuvii" path="res://scenes/bugs/caterpillar.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://Scripts/game_manager.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://Assets/temp/grass_prototype.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dpc1wbwtvuvii" path="res://Scenes/bugs/caterpillar.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://Scenes/MenuUI.tscn" id="4_7lihs"]
+[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://Scenes/OnScreenUI.tscn" id="5_fgofq"]
+[ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://Scenes/PauseUI.tscn" id="6_2irst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(1440, 32)
@@ -11,6 +14,19 @@ size = Vector2(1440, 32)
 size = Vector2(32, 816)
 
 [node name="Game" type="Node2D" unique_id=1310251541]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=479907304]
+
+[node name="MenuUI" parent="CanvasLayer" unique_id=1308173404 instance=ExtResource("4_7lihs")]
+visible = false
+
+[node name="OnScreenUI" parent="CanvasLayer" unique_id=878809337 instance=ExtResource("5_fgofq")]
+
+[node name="PauseUI" parent="CanvasLayer" unique_id=1519703332 instance=ExtResource("6_2irst")]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="GameManager" type="Node" parent="." unique_id=602831503]
 unique_name_in_owner = true
