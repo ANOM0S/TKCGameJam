@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ceourlne88r2k"]
+
+[ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://assets/temp/grass_prototype.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dpc1wbwtvuvii" path="res://scenes/bugs/caterpillar.tscn" id="2_yqjtg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(1440, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(32, 816)
+
+[node name="Game" type="Node2D" unique_id=1310251541]
+
+[node name="Camera" type="Camera2D" parent="." unique_id=151029701]
+anchor_mode = 0
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=277430586]
+z_index = -1
+texture = ExtResource("1_yqjtg")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1440, 1080)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=646394969]
+
+[node name="SouthCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=681610687]
+position = Vector2(720, 1096)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="WestCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1437322045]
+position = Vector2(-16, 704)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="EastCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=2120187376]
+position = Vector2(1456, 704)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="NorthCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=506722386]
+position = Vector2(720, 312)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="Caterpillar" parent="." unique_id=1370927661 instance=ExtResource("2_yqjtg")]
+position = Vector2(704, 704)

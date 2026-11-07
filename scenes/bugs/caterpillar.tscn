@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dpc1wbwtvuvii"]
+
+[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://scripts/bug.gd" id="1_7lqn1"]
+[ext_resource type="Texture2D" uid="uid://cd0j3d7m5bt6n" path="res://assets/bugs/Caterpillar/CAT_1.PNG" id="1_idke5"]
+[ext_resource type="Texture2D" uid="uid://csytg8fgta40b" path="res://assets/bugs/Caterpillar/CAT_2.PNG" id="2_7lqn1"]
+[ext_resource type="Texture2D" uid="uid://b3tpgexm1gdq5" path="res://assets/bugs/Caterpillar/CAT_3.PNG" id="3_2brgu"]
+[ext_resource type="Texture2D" uid="uid://ckb0c3se3w87u" path="res://assets/bugs/Caterpillar/CAT_4.PNG" id="4_cb1ad"]
+[ext_resource type="Texture2D" uid="uid://c70cd4bnxmfgw" path="res://assets/bugs/Caterpillar/CAT_STAND.PNG" id="5_tsnbl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_tsnbl")
+}],
+"loop": 1,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_idke5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7lqn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2brgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cb1ad")
+}],
+"loop": 1,
+"name": &"MOVE",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agab0"]
+radius = 56.0
+height = 192.0
+
+[node name="Caterpillar" type="CharacterBody2D" unique_id=1370927661]
+motion_mode = 1
+script = ExtResource("1_7lqn1")
+speed = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1232545983]
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"IDLE"
+autoplay = "IDLE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521361009]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_agab0")
+
+[node name="Timer" type="Timer" parent="." unique_id=614057527]

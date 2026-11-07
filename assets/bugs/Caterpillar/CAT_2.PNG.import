@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csytg8fgta40b"
-path="res://.godot/imported/CAT_2.PNG-0d1589fc9cc83fabd15347f582b5bdef.ctex"
+path="res://.godot/imported/CAT_2.PNG-e043cc17ef588617a84c12c53e857a0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bugs/Caterpillar/CAT_2.PNG"
-dest_files=["res://.godot/imported/CAT_2.PNG-0d1589fc9cc83fabd15347f582b5bdef.ctex"]
+source_file="res://assets/bugs/Caterpillar/CAT_2.PNG"
+dest_files=["res://.godot/imported/CAT_2.PNG-e043cc17ef588617a84c12c53e857a0d.ctex"]
 
 [params]
 
