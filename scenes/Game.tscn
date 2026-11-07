@@ -16,6 +16,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1440, 1080)
 
 [node name="Caterpillar" type="Sprite2D" parent="." unique_id=2003625996]
-position = Vector2(256, 856)
-scale = Vector2(0.4, 0.4)
+position = Vector2(263, 847)
+scale = Vector2(0.33867186, 0.33867186)
 texture = ExtResource("2_yqjtg")
