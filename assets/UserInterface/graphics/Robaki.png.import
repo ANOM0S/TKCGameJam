@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2we4hn183en8"
-path="res://.godot/imported/Robaki.png-6413f4df3e696e34e0d06bce5c3882b2.ctex"
+path="res://.godot/imported/Robaki.png-ab602175b0a8ec585747c1e726f2796f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UserInterface/graphics/Robaki.png"
-dest_files=["res://.godot/imported/Robaki.png-6413f4df3e696e34e0d06bce5c3882b2.ctex"]
+source_file="res://assets/UserInterface/graphics/Robaki.png"
+dest_files=["res://.godot/imported/Robaki.png-ab602175b0a8ec585747c1e726f2796f.ctex"]
 
 [params]
 

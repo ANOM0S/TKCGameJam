@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bhmi8mkrb32pk"]
 
 [ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_14kg6"]
-[ext_resource type="Texture2D" uid="uid://cb6wljdyx81w0" path="res://Assets/bugs/Ant/ANT_STAND.png" id="2_14kg6"]
-[ext_resource type="Texture2D" uid="uid://de2kwcvltpjd7" path="res://Assets/bugs/Ant/ANT1.png" id="3_os22p"]
-[ext_resource type="Texture2D" uid="uid://cag77b586gwg6" path="res://Assets/bugs/Ant/ANT2.png" id="4_h4b1a"]
-[ext_resource type="Texture2D" uid="uid://c8ctmo6qn585q" path="res://Assets/bugs/Ant/ANT3.png" id="5_n48d0"]
-[ext_resource type="Texture2D" uid="uid://bbf12h4q53m8b" path="res://Assets/bugs/Ant/ANT4.png" id="6_7v82w"]
+[ext_resource type="Texture2D" uid="uid://cb6wljdyx81w0" path="res://assets/bugs/Ant/ANT_STAND.png" id="2_14kg6"]
+[ext_resource type="Texture2D" uid="uid://de2kwcvltpjd7" path="res://assets/bugs/Ant/ANT1.png" id="3_os22p"]
+[ext_resource type="Texture2D" uid="uid://cag77b586gwg6" path="res://assets/bugs/Ant/ANT2.png" id="4_h4b1a"]
+[ext_resource type="Texture2D" uid="uid://c8ctmo6qn585q" path="res://assets/bugs/Ant/ANT3.png" id="5_n48d0"]
+[ext_resource type="Texture2D" uid="uid://bbf12h4q53m8b" path="res://assets/bugs/Ant/ANT4.png" id="6_7v82w"]
 [ext_resource type="AudioStream" uid="uid://dgi0elx2fr1rl" path="res://Sounds/SquishSound.mp3" id="7_64nu1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]

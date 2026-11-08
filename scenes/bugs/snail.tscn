@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dwfaijb8058cu"]
 
 [ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_1siu2"]
-[ext_resource type="Texture2D" uid="uid://fyd5aqgfw2mp" path="res://Assets/bugs/Snail/SNAILSTAND.png" id="2_1siu2"]
-[ext_resource type="Texture2D" uid="uid://cribci08ib5va" path="res://Assets/bugs/Snail/SNAIL1.png" id="3_1siu2"]
-[ext_resource type="Texture2D" uid="uid://djisgud5b8i8k" path="res://Assets/bugs/Snail/SNAIL2.png" id="4_titwt"]
-[ext_resource type="Texture2D" uid="uid://db5qtegth0is4" path="res://Assets/bugs/Snail/SNAIL3.png" id="5_oes8e"]
-[ext_resource type="Texture2D" uid="uid://oe4u3q85nwng" path="res://Assets/bugs/Snail/SNAIL4.png" id="6_gakl5"]
+[ext_resource type="Texture2D" uid="uid://fyd5aqgfw2mp" path="res://assets/bugs/Snail/SNAILSTAND.png" id="2_1siu2"]
+[ext_resource type="Texture2D" uid="uid://cribci08ib5va" path="res://assets/bugs/Snail/SNAIL1.png" id="3_1siu2"]
+[ext_resource type="Texture2D" uid="uid://djisgud5b8i8k" path="res://assets/bugs/Snail/SNAIL2.png" id="4_titwt"]
+[ext_resource type="Texture2D" uid="uid://db5qtegth0is4" path="res://assets/bugs/Snail/SNAIL3.png" id="5_oes8e"]
+[ext_resource type="Texture2D" uid="uid://oe4u3q85nwng" path="res://assets/bugs/Snail/SNAIL4.png" id="6_gakl5"]
 [ext_resource type="AudioStream" uid="uid://dgi0elx2fr1rl" path="res://Sounds/SquishSound.mp3" id="7_p6d8w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]

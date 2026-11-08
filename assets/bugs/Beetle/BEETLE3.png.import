@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm5juj3sap1uf"
-path="res://.godot/imported/BEETLE3.png-9e562d00a2a1b941290063b53f54f9c3.ctex"
+path="res://.godot/imported/BEETLE3.png-113d554b5985819366e8ed573c4bb00f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bugs/Beetle/BEETLE3.png"
-dest_files=["res://.godot/imported/BEETLE3.png-9e562d00a2a1b941290063b53f54f9c3.ctex"]
+source_file="res://assets/bugs/Beetle/BEETLE3.png"
+dest_files=["res://.godot/imported/BEETLE3.png-113d554b5985819366e8ed573c4bb00f.ctex"]
 
 [params]
 

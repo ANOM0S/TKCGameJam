@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://3ld0tf4pphxx"]
 
 [ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_ehydl"]
-[ext_resource type="Texture2D" uid="uid://c52fcl54n5swe" path="res://Assets/bugs/Earthworm/WORM1andSTAND.png" id="2_ehydl"]
-[ext_resource type="Texture2D" uid="uid://mb8b14ehhgn" path="res://Assets/bugs/Earthworm/WORM2.png" id="3_hr50v"]
-[ext_resource type="Texture2D" uid="uid://bj2k854b67b60" path="res://Assets/bugs/Earthworm/WORM3.png" id="4_1jihd"]
-[ext_resource type="Texture2D" uid="uid://dcc6n2404f3mc" path="res://Assets/bugs/Earthworm/WORM4.png" id="5_q2bt8"]
-[ext_resource type="Texture2D" uid="uid://ffunodnaejem" path="res://Assets/bugs/Earthworm/WORM5.png" id="6_l2ote"]
-[ext_resource type="Texture2D" uid="uid://33wwak0s736q" path="res://Assets/bugs/Earthworm/WORM6.png" id="7_h5k32"]
+[ext_resource type="Texture2D" uid="uid://c52fcl54n5swe" path="res://assets/bugs/Earthworm/WORM1andSTAND.png" id="2_ehydl"]
+[ext_resource type="Texture2D" uid="uid://mb8b14ehhgn" path="res://assets/bugs/Earthworm/WORM2.png" id="3_hr50v"]
+[ext_resource type="Texture2D" uid="uid://bj2k854b67b60" path="res://assets/bugs/Earthworm/WORM3.png" id="4_1jihd"]
+[ext_resource type="Texture2D" uid="uid://dcc6n2404f3mc" path="res://assets/bugs/Earthworm/WORM4.png" id="5_q2bt8"]
+[ext_resource type="Texture2D" uid="uid://ffunodnaejem" path="res://assets/bugs/Earthworm/WORM5.png" id="6_l2ote"]
+[ext_resource type="Texture2D" uid="uid://33wwak0s736q" path="res://assets/bugs/Earthworm/WORM6.png" id="7_h5k32"]
 [ext_resource type="AudioStream" uid="uid://dgi0elx2fr1rl" path="res://Sounds/SquishSound.mp3" id="8_hjx7u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]

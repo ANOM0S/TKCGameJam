@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de3we07oencec"
-path="res://.godot/imported/Pauza_Tabela.png-57c7e2693fe61ebbe28125d4b2579108.ctex"
+path="res://.godot/imported/Pauza_Tabela.png-d16ac82b802086a62f0e31bc07d83e0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UserInterface/graphics/Pauza_Tabela.png"
-dest_files=["res://.godot/imported/Pauza_Tabela.png-57c7e2693fe61ebbe28125d4b2579108.ctex"]
+source_file="res://assets/UserInterface/graphics/Pauza_Tabela.png"
+dest_files=["res://.godot/imported/Pauza_Tabela.png-d16ac82b802086a62f0e31bc07d83e0d.ctex"]
 
 [params]
 

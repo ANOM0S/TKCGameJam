@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://gvj1vds64n0y" path="res://Scripts/on_screen_ui.gd" id="1_v8uxx"]
 [ext_resource type="PackedScene" uid="uid://nr8hvrvmpdno" path="res://Scenes/bugsAmounts.tscn" id="2_niobk"]
-[ext_resource type="Texture2D" uid="uid://b4ysbr28sktjd" path="res://Assets/UserInterface/graphics/Arrow.png" id="2_pv3ra"]
+[ext_resource type="Texture2D" uid="uid://b4ysbr28sktjd" path="res://assets/UserInterface/graphics/Arrow.png" id="2_pv3ra"]
 [ext_resource type="Script" uid="uid://cdejikrw68177" path="res://Scripts/cooldown_indicator.gd" id="3_uy7sv"]
-[ext_resource type="Script" uid="uid://di7a6fauiynr2" path="res://scenes/day_indicatior.gd" id="4_bgjqq"]
+[ext_resource type="Script" uid="uid://di7a6fauiynr2" path="res://Scenes/day_indicatior.gd" id="4_bgjqq"]
+[ext_resource type="Texture2D" uid="uid://b0f20piatoaie" path="res://assets/UserInterface/graphics/Pauza.png" id="4_rhb7p"]
 
 [node name="OnScreenUI" type="Control" unique_id=878809337]
 custom_minimum_size = Vector2(1440, 1080)
@@ -50,13 +51,13 @@ flip_v = true
 [node name="Bugs" parent="OnScreenUI" unique_id=320049089 instance=ExtResource("2_niobk")]
 layout_mode = 2
 
-[node name="PauseButton" type="Button" parent="OnScreenUI" unique_id=1268861861]
+[node name="PauseButton" type="TextureButton" parent="OnScreenUI" unique_id=405003726]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
-text = "PAUSE"
+texture_normal = ExtResource("4_rhb7p")
 
 [node name="CaugchCooldown" type="Control" parent="OnScreenUI" unique_id=1696813868]
 custom_minimum_size = Vector2(150, 150)

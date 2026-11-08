@@ -1,7 +1,7 @@
 extends Control   
 
 # Połączenie z przyciskami i licznikiem robaków
-@onready var pause_button: Button = %PauseButton
+@onready var pause_button: TextureButton = %PauseButton
 @onready var go_to_quota: TextureButton = %GoToQuota
 @onready var count_label: Label = $OnScreenUI/Bugs/BugAmount
 

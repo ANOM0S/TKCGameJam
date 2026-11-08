@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nr8hvrvmpdno"]
 
-[ext_resource type="Texture2D" uid="uid://d2we4hn183en8" path="res://Assets/UserInterface/graphics/Robaki.png" id="1_yybxp"]
+[ext_resource type="Texture2D" uid="uid://d2we4hn183en8" path="res://assets/UserInterface/graphics/Robaki.png" id="1_yybxp"]
 
 [node name="Bug" type="HBoxContainer" unique_id=320049089]
 size_flags_horizontal = 0

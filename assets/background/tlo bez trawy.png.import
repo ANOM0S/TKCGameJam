@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vlutr61txkqf"
-path="res://.godot/imported/tlo bez trawy.png-3840c7af8415cd0597443c199418942c.ctex"
+path="res://.godot/imported/tlo bez trawy.png-4989684339c0c01e9607c4d498bce0c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/background/tlo bez trawy.png"
-dest_files=["res://.godot/imported/tlo bez trawy.png-3840c7af8415cd0597443c199418942c.ctex"]
+source_file="res://assets/background/tlo bez trawy.png"
+dest_files=["res://.godot/imported/tlo bez trawy.png-4989684339c0c01e9607c4d498bce0c4.ctex"]
 
 [params]
 

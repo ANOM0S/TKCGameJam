@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyn7mco5am8ph"
-path="res://.godot/imported/trawa2.png-85778302ad79ddd32a17252b008033df.ctex"
+path="res://.godot/imported/trawa2.png-0257ddd00b74f8eeb8f015a187a49075.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/background/grass/trawa2.png"
-dest_files=["res://.godot/imported/trawa2.png-85778302ad79ddd32a17252b008033df.ctex"]
+source_file="res://assets/background/grass/trawa2.png"
+dest_files=["res://.godot/imported/trawa2.png-0257ddd00b74f8eeb8f015a187a49075.ctex"]
 
 [params]
 

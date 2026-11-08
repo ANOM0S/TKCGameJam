@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4m8hpqwqvu6l"
-path="res://.godot/imported/BIRB_TALK9.png-3391909d7879d98319c96a74031ed78b.ctex"
+path="res://.godot/imported/BIRB_TALK9.png-3669ff792a232c9eeef4c944144a6abe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/birb/talk/BIRB_TALK9.png"
-dest_files=["res://.godot/imported/BIRB_TALK9.png-3391909d7879d98319c96a74031ed78b.ctex"]
+source_file="res://assets/Characters/birb/talk/BIRB_TALK9.png"
+dest_files=["res://.godot/imported/BIRB_TALK9.png-3669ff792a232c9eeef4c944144a6abe.ctex"]
 
 [params]
 

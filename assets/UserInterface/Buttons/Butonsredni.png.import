@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://euo5sy457w52"
-path="res://.godot/imported/Butonsredni.png-9c494188ee0f84a2087a9995c3343d53.ctex"
+path="res://.godot/imported/Butonsredni.png-c616e2ccf459c726f712979e754685e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UserInterface/Buttons/Butonsredni.png"
-dest_files=["res://.godot/imported/Butonsredni.png-9c494188ee0f84a2087a9995c3343d53.ctex"]
+source_file="res://assets/UserInterface/Buttons/Butonsredni.png"
+dest_files=["res://.godot/imported/Butonsredni.png-c616e2ccf459c726f712979e754685e0.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cig2l7tnrjgch"]
 
 [ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_aflcv"]
-[ext_resource type="Texture2D" uid="uid://bkq64nqo8lwfp" path="res://Assets/bugs/Moth/MOTH1.png" id="2_oy6mh"]
-[ext_resource type="Texture2D" uid="uid://b7dfplqorswpa" path="res://Assets/bugs/Moth/MOTH2.png" id="3_aflcv"]
-[ext_resource type="Texture2D" uid="uid://daenxoeecy4pc" path="res://Assets/bugs/Moth/MOTH3.png" id="4_y5wv3"]
-[ext_resource type="Texture2D" uid="uid://b8tshh2utsie3" path="res://Assets/bugs/Moth/MOTH4.png" id="5_kjaov"]
+[ext_resource type="Texture2D" uid="uid://bkq64nqo8lwfp" path="res://assets/bugs/Moth/MOTH1.png" id="2_oy6mh"]
+[ext_resource type="Texture2D" uid="uid://b7dfplqorswpa" path="res://assets/bugs/Moth/MOTH2.png" id="3_aflcv"]
+[ext_resource type="Texture2D" uid="uid://daenxoeecy4pc" path="res://assets/bugs/Moth/MOTH3.png" id="4_y5wv3"]
+[ext_resource type="Texture2D" uid="uid://b8tshh2utsie3" path="res://assets/bugs/Moth/MOTH4.png" id="5_kjaov"]
 [ext_resource type="AudioStream" uid="uid://dgi0elx2fr1rl" path="res://Sounds/SquishSound.mp3" id="6_pifc0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]

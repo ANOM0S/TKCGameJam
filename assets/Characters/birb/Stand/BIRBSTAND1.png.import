@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bur40ienscdo1"
-path="res://.godot/imported/BIRBSTAND1.png-b0ddd496ac16d9752ee87ca36bf8eecf.ctex"
+path="res://.godot/imported/BIRBSTAND1.png-462e8828c9abd064c28cd78ce3db44f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/birb/Stand/BIRBSTAND1.png"
-dest_files=["res://.godot/imported/BIRBSTAND1.png-b0ddd496ac16d9752ee87ca36bf8eecf.ctex"]
+source_file="res://assets/Characters/birb/Stand/BIRBSTAND1.png"
+dest_files=["res://.godot/imported/BIRBSTAND1.png-462e8828c9abd064c28cd78ce3db44f4.ctex"]
 
 [params]
 

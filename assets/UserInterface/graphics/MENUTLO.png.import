@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5vmfhsxu620k"
-path="res://.godot/imported/MENUTLO.png-3625bf9e982bb82f249670e3b613ee9f.ctex"
+path="res://.godot/imported/MENUTLO.png-ca0c29a506ded70adaf06cf7e0338570.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UserInterface/graphics/MENUTLO.png"
-dest_files=["res://.godot/imported/MENUTLO.png-3625bf9e982bb82f249670e3b613ee9f.ctex"]
+source_file="res://assets/UserInterface/graphics/MENUTLO.png"
+dest_files=["res://.godot/imported/MENUTLO.png-ca0c29a506ded70adaf06cf7e0338570.ctex"]
 
 [params]
 
