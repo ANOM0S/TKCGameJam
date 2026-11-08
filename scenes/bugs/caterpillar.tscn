@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpc1wbwtvuvii"]
 
-[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://scripts/bug.gd" id="1_7lqn1"]
+[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://scripts/entities/bug.gd" id="1_7lqn1"]
 [ext_resource type="Texture2D" uid="uid://cd0j3d7m5bt6n" path="res://assets/bugs/Caterpillar/CAT_1.PNG" id="1_idke5"]
 [ext_resource type="Texture2D" uid="uid://csytg8fgta40b" path="res://assets/bugs/Caterpillar/CAT_2.PNG" id="2_7lqn1"]
 [ext_resource type="Texture2D" uid="uid://b3tpgexm1gdq5" path="res://assets/bugs/Caterpillar/CAT_3.PNG" id="3_2brgu"]
@@ -36,14 +36,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agab0"]
-radius = 56.0
+radius = 48.0
 height = 192.0
 
 [node name="Caterpillar" type="CharacterBody2D" unique_id=1370927661]
+collision_layer = 2
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_7lqn1")
-bugType = 2
+bug_type = 2
 speed = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1232545983]

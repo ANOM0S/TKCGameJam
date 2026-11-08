@@ -1,22 +1,24 @@
 extends CharacterBody2D
 
 
-@export var bugType: Enums.type
+@export var bug_type: Enums.type
 @export var speed = 30.0
 @export var speed_multiplier = 100.0
 
 enum state { IDLE, MOVE }
 
+var game_manager: Node
 var direction: Vector2 = Vector2.ZERO
 var current_orientation: Vector2 = Vector2.RIGHT
 var current_state: state = state.IDLE
 
 @onready var timer: Timer = $Timer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var game_manager: Node = %GameManager
 
 
 func _ready() -> void:
+	game_manager = get_parent().game_manager
+	
 	_choose_new_direction()
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
@@ -55,7 +57,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 ## removes the bug and adds score in game manager
 func collect():
-	game_manager.add_point(bugType)
+	game_manager.add_point(bug_type)
 	queue_free()
 
 

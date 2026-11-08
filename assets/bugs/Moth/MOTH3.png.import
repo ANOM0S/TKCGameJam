@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daenxoeecy4pc"
-path="res://.godot/imported/MOTH3.png-575bb00293aeef917b6a15912ed1cea3.ctex"
+path="res://.godot/imported/MOTH3.png-437b07ca63f3d80e84c02a50c805e51f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bugs/Moth/MOTH3.png"
-dest_files=["res://.godot/imported/MOTH3.png-575bb00293aeef917b6a15912ed1cea3.ctex"]
+source_file="res://assets/bugs/Moth/MOTH3.png"
+dest_files=["res://.godot/imported/MOTH3.png-437b07ca63f3d80e84c02a50c805e51f.ctex"]
 
 [params]
 
