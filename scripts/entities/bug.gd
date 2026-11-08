@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 @export var bug_type: Enums.type
 @export var speed = 30.0
 @export var speed_multiplier = 100.0
@@ -65,15 +64,12 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 ## removes the bug and adds score in game manager
 func collect():
-	game_manager.add_point(bug_type)
-	
-	# Lekko zmieniona wersja aby zapewnić, że zagra dzwięk
 	hide()
 	set_deferred("input_pickable", false)
 	squish_sfx.play()
 	await squish_sfx.finished
 
-	game_manager.add_point(bug_type)
+	game_manager.add_point()
 	queue_free()
 
 

@@ -6,8 +6,8 @@ const SETTINGS_SCENE := "res://Scenes/SettingsUI.tscn"
 
 # Powiązania z przyciskami
 @onready var panel: Control = $MainMenu
-@onready var resume_btn: Button = $MainMenu/VBoxContainer/VBoxContainer/Resume
-@onready var quit_btn: Button = $MainMenu/VBoxContainer/VBoxContainer/Quit
+@onready var resume_btn: TextureButton = $MainMenu/VBoxContainer/VBoxContainer/Resume
+@onready var quit_btn: TextureButton = $MainMenu/VBoxContainer/VBoxContainer/Quit
 
 func _ready() -> void:
 	add_to_group("pause_menu")

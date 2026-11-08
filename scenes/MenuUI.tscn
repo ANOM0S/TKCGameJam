@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://h3ebetipjyfd"]
 
 [ext_resource type="Script" uid="uid://c83ds28nqi175" path="res://Scripts/menu_ui.gd" id="1_811wr"]
+[ext_resource type="Texture2D" uid="uid://c5vmfhsxu620k" path="res://Assets/UserInterface/graphics/MENUTLO.png" id="2_a8bay"]
+[ext_resource type="Texture2D" uid="uid://brr1sicbwak6h" path="res://Assets/UserInterface/Texts/Logo.png" id="3_a8bay"]
+[ext_resource type="Texture2D" uid="uid://euo5sy457w52" path="res://Assets/UserInterface/Buttons/Butonsredni.png" id="4_v305d"]
 
 [node name="MenuUI" type="Control" unique_id=1308173404]
 custom_minimum_size = Vector2(1440, 1080)
@@ -20,6 +23,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=780822218]
+layout_mode = 2
+texture = ExtResource("2_a8bay")
+
 [node name="MarginContainer" type="MarginContainer" parent="MainMenu" unique_id=1788255812]
 layout_mode = 2
 theme_override_constants/margin_left = 100
@@ -27,48 +34,60 @@ theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 150
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/MarginContainer" unique_id=1167820954]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_constants/separation = 80
-
-[node name="Logo" type="ColorRect" parent="MainMenu/MarginContainer/VBoxContainer" unique_id=1903341548]
-custom_minimum_size = Vector2(620, 200)
-layout_mode = 2
-color = Color(0, 0.75267696, 0.7528075, 1)
-
-[node name="LP" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/Logo" unique_id=286932597]
-custom_minimum_size = Vector2(310, 75)
-layout_mode = 0
-offset_right = 621.0
-offset_bottom = 201.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "LOGO PLACEHOLDER"
-
-[node name="MenuOptions" type="VBoxContainer" parent="MainMenu/MarginContainer/VBoxContainer" unique_id=1850319310]
+[node name="MenuOptions" type="VBoxContainer" parent="MainMenu/MarginContainer" unique_id=1850319310]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 20
 
-[node name="NewGame" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/MenuOptions" unique_id=1772104882]
+[node name="Logo" type="TextureRect" parent="MainMenu/MarginContainer/MenuOptions" unique_id=1082949783]
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+texture = ExtResource("3_a8bay")
+expand_mode = 1
+
+[node name="NewGame" type="TextureButton" parent="MainMenu/MarginContainer/MenuOptions" unique_id=380575547]
 custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+tooltip_text = "New Game"
+texture_normal = ExtResource("4_v305d")
+
+[node name="Label" type="Label" parent="MainMenu/MarginContainer/MenuOptions/NewGame" unique_id=1166490853]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 41.0
+offset_right = 243.0
+offset_bottom = 64.0
 text = "New Game"
 
-[node name="Settings" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/MenuOptions" unique_id=321164929]
+[node name="Settings" type="TextureButton" parent="MainMenu/MarginContainer/MenuOptions" unique_id=1922072740]
 custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture_normal = ExtResource("4_v305d")
+
+[node name="Label" type="Label" parent="MainMenu/MarginContainer/MenuOptions/Settings" unique_id=1370342826]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 41.0
+offset_right = 243.0
+offset_bottom = 64.0
 text = "Settings"
 
-[node name="Exit" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/MenuOptions" unique_id=129564644]
+[node name="Exit" type="TextureButton" parent="MainMenu/MarginContainer/MenuOptions" unique_id=1519421469]
 custom_minimum_size = Vector2(310, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture_normal = ExtResource("4_v305d")
+
+[node name="Label" type="Label" parent="MainMenu/MarginContainer/MenuOptions/Exit" unique_id=550638574]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 43.0
+offset_right = 262.0
+offset_bottom = 66.0
 text = "Exit"

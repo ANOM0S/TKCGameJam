@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://gvj1vds64n0y" path="res://Scripts/on_screen_ui.gd" id="1_v8uxx"]
 [ext_resource type="PackedScene" uid="uid://nr8hvrvmpdno" path="res://Scenes/bugsAmounts.tscn" id="2_niobk"]
+[ext_resource type="Texture2D" uid="uid://b4ysbr28sktjd" path="res://Assets/UserInterface/graphics/Arrow.png" id="2_pv3ra"]
 [ext_resource type="Script" uid="uid://cdejikrw68177" path="res://Scripts/cooldown_indicator.gd" id="3_uy7sv"]
+[ext_resource type="Script" uid="uid://di7a6fauiynr2" path="res://scenes/day_indicatior.gd" id="4_bgjqq"]
 
-[node name="OnScreenUI2" type="Control" unique_id=878809337]
+[node name="OnScreenUI" type="Control" unique_id=878809337]
 custom_minimum_size = Vector2(1440, 1080)
 layout_mode = 3
 anchors_preset = 15
@@ -17,9 +19,9 @@ script = ExtResource("1_v8uxx")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1296440238]
 layout_mode = 0
-offset_left = 42.0
+offset_left = 33.0
 offset_top = 35.0
-offset_right = 838.0
+offset_right = 223.0
 offset_bottom = 143.0
 color = Color(0.15294118, 0.15294118, 0.15294118, 0.4509804)
 
@@ -36,13 +38,14 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="GoToQuota" type="Button" parent="OnScreenUI" unique_id=905253125]
+[node name="GoToQuota" type="TextureButton" parent="OnScreenUI" unique_id=1942780515]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 100)
+custom_minimum_size = Vector2(75, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-text = "Do quoty"
+texture_normal = ExtResource("2_pv3ra")
+flip_v = true
 
 [node name="Bugs" parent="OnScreenUI" unique_id=320049089 instance=ExtResource("2_niobk")]
 layout_mode = 2
@@ -70,6 +73,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 mouse_filter = 2
+script = ExtResource("4_bgjqq")
 
 [node name="Label" type="Label" parent="OnScreenUI/DayIndicatior" unique_id=1360158990]
 layout_mode = 1

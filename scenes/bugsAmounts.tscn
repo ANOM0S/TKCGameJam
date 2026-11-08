@@ -1,92 +1,19 @@
 [gd_scene format=3 uid="uid://nr8hvrvmpdno"]
 
-[ext_resource type="Texture2D" uid="uid://cb6wljdyx81w0" path="res://Assets/bugs/Ant/ANT_STAND.png" id="1_l211n"]
-[ext_resource type="Texture2D" uid="uid://bntxnfrk6g23j" path="res://Assets/bugs/Beetle/BEETLESTAND.png" id="2_tuagf"]
-[ext_resource type="Texture2D" uid="uid://c70cd4bnxmfgw" path="res://Assets/bugs/Caterpillar/CAT_STAND.PNG" id="3_ykg1r"]
-[ext_resource type="Texture2D" uid="uid://fyd5aqgfw2mp" path="res://Assets/bugs/Snail/SNAILSTAND.png" id="4_j6rtb"]
-[ext_resource type="Texture2D" uid="uid://bkq64nqo8lwfp" path="res://Assets/bugs/Moth/MOTH1.png" id="5_ngeh0"]
-[ext_resource type="Texture2D" uid="uid://dcc6n2404f3mc" path="res://Assets/bugs/Earthworm/WORM4.png" id="6_c0vyc"]
+[ext_resource type="Texture2D" uid="uid://d2we4hn183en8" path="res://Assets/UserInterface/graphics/Robaki.png" id="1_yybxp"]
 
-[node name="Bugs" type="HBoxContainer" unique_id=320049089]
+[node name="Bug" type="HBoxContainer" unique_id=320049089]
 size_flags_horizontal = 0
 size_flags_vertical = 0
 mouse_filter = 2
 theme_override_constants/separation = 20
 
-[node name="Ant" type="HBoxContainer" parent="." unique_id=1892225188]
+[node name="Bug2" type="TextureRect" parent="." unique_id=239306322]
+custom_minimum_size = Vector2(105, 90)
 layout_mode = 2
-
-[node name="Ant" type="TextureRect" parent="Ant" unique_id=239306322]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("1_l211n")
+texture = ExtResource("1_yybxp")
 expand_mode = 1
 
-[node name="AntAmount" type="Label" parent="Ant" unique_id=2024589777]
-layout_mode = 2
-text = "0"
-
-[node name="Beetle" type="HBoxContainer" parent="." unique_id=669253785]
-layout_mode = 2
-
-[node name="Beetle" type="TextureRect" parent="Beetle" unique_id=2139870255]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("2_tuagf")
-expand_mode = 1
-
-[node name="BeetleAmount" type="Label" parent="Beetle" unique_id=1202319116]
-layout_mode = 2
-text = "0"
-
-[node name="Caterpillar" type="HBoxContainer" parent="." unique_id=52142275]
-layout_mode = 2
-
-[node name="Caterpilar" type="TextureRect" parent="Caterpillar" unique_id=1269073413]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("3_ykg1r")
-expand_mode = 1
-
-[node name="CaterpillarAmount" type="Label" parent="Caterpillar" unique_id=1731120150]
-layout_mode = 2
-text = "0"
-
-[node name="Snail" type="HBoxContainer" parent="." unique_id=557742762]
-layout_mode = 2
-
-[node name="Snail" type="TextureRect" parent="Snail" unique_id=1178182646]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("4_j6rtb")
-expand_mode = 1
-
-[node name="SnailAmount" type="Label" parent="Snail" unique_id=1403270604]
-layout_mode = 2
-text = "0"
-
-[node name="Moth" type="HBoxContainer" parent="." unique_id=1505791774]
-layout_mode = 2
-
-[node name="Moth" type="TextureRect" parent="Moth" unique_id=1286503890]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("5_ngeh0")
-expand_mode = 1
-
-[node name="MothAmoubt" type="Label" parent="Moth" unique_id=308913428]
-layout_mode = 2
-text = "0"
-
-[node name="Earthworm" type="HBoxContainer" parent="." unique_id=662094826]
-layout_mode = 2
-
-[node name="Earthworm" type="TextureRect" parent="Earthworm" unique_id=217941622]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("6_c0vyc")
-expand_mode = 1
-
-[node name="EarthwormAmount" type="Label" parent="Earthworm" unique_id=1761484219]
+[node name="BugAmount" type="Label" parent="." unique_id=2024589777]
 layout_mode = 2
 text = "0"
