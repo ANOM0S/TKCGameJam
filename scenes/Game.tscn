@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ceourlne88r2k"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://Scripts/function_nodes/game_manager.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://assets/temp/grass_prototype.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://Scenes/MenuUI.tscn" id="4_7lihs"]
@@ -8,10 +9,21 @@
 [ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://scenes/OnScreenUI.tscn" id="5_fgofq"]
 [ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://scenes/PauseUI.tscn" id="6_2irst"]
 [ext_resource type="Script" uid="uid://dsy5qpepkp1j3" path="res://Scripts/function_nodes/bug_spawner.gd" id="6_u5sy4"]
+=======
+[ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://scripts/function_nodes/game_manager.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://assets/temp/grass_prototype.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://scenes/MenuUI.tscn" id="4_7lihs"]
+[ext_resource type="PackedScene" uid="uid://b0hkm1fi1t7op" path="res://scenes/Quota.tscn" id="4_fgofq"]
+[ext_resource type="Shader" uid="uid://b5gl1lio7abda" path="res://scripts/OldFilm.gdshader" id="5_2irst"]
+[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://scenes/OnScreenUI.tscn" id="5_fgofq"]
+[ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://scenes/PauseUI.tscn" id="6_2irst"]
+[ext_resource type="Script" uid="uid://dsy5qpepkp1j3" path="res://scripts/function_nodes/bug_spawner.gd" id="6_u5sy4"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://d1t6afcucvky3" path="res://assets/background/grass/trawa1.png" id="8_3so38"]
 [ext_resource type="Texture2D" uid="uid://cyn7mco5am8ph" path="res://assets/background/grass/trawa2.png" id="9_3cx6b"]
 [ext_resource type="Texture2D" uid="uid://vlutr61txkqf" path="res://assets/background/tlo bez trawy.png" id="9_bf53h"]
 [ext_resource type="Texture2D" uid="uid://drl726ms7mgfg" path="res://assets/background/grass/trawa3.png" id="10_wxwew"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bur40ienscdo1" path="res://assets/Characters/birb/Stand/BIRBSTAND1.png" id="11_i0vto"]
 [ext_resource type="Texture2D" uid="uid://x4wj7c5qugd" path="res://assets/Characters/birb/Stand/BIRBSTAND2.png" id="12_3jf1l"]
 [ext_resource type="Texture2D" uid="uid://4yayohux4t6u" path="res://assets/Characters/birb/Stand/BIRBSTAND3.png" id="13_356ba"]
@@ -26,6 +38,13 @@
 [ext_resource type="Texture2D" uid="uid://d4m8hpqwqvu6l" path="res://assets/Characters/birb/talk/BIRB_TALK9.png" id="22_4eqlp"]
 [ext_resource type="Texture2D" uid="uid://crqo0o6lfjsqm" path="res://assets/Characters/birb/talk/BIRB_TALK10.png" id="23_18uti"]
 [ext_resource type="Texture2D" uid="uid://dtytep1wwq8sn" path="res://assets/Characters/birb/talk/BIRB_TALK11.png" id="24_khy6b"]
+=======
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w0lky"]
+shader = ExtResource("5_2irst")
+shader_parameter/projector_power = 0.5
+shader_parameter/vignette_param = 20.0
+>>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w0lky"]
 animations = [{
@@ -160,7 +179,6 @@ mouse_filter = 2
 [node name="GameManager" type="Node" parent="." unique_id=602831503]
 unique_name_in_owner = true
 script = ExtResource("1_lnu2h")
-default_spawn_interval = 1.0
 
 [node name="SpawnTimer" type="Timer" parent="GameManager" unique_id=1076436596]
 
@@ -210,4 +228,9 @@ position = Vector2(720, 704)
 shape = SubResource("RectangleShape2D_13qdw")
 debug_color = Color(0.4147871, 0.59687465, 0.2999056, 0.41960785)
 
+<<<<<<< Updated upstream
 [connection signal="timeout" from="GameManager/DayTimer" to="GameManager" method="_on_day_timer_timeout"]
+=======
+[node name="Bugs" type="Node2D" parent="BugSpawner" unique_id=1236333207]
+y_sort_enabled = true
+>>>>>>> Stashed changes

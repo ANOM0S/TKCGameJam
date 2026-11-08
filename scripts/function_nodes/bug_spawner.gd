@@ -5,19 +5,20 @@ const bug_scene_path := "res://scenes/bugs"
 var bug_scenes := { }
 
 @onready var game_manager: Node = %GameManager
+@onready var bugs: Node2D = $Bugs
 
 
 func _ready() -> void:
 	_load_scenes()
 
 
-func spawn(bug_type: Enums.type, position: Vector2) -> void:
+func spawn(bug_type: Enums.type, bug_position: Vector2) -> void:
 	var bug_name = Enums.type.find_key(bug_type)
 	var bug_scene: PackedScene = bug_scenes[bug_name]
 	var bug: CharacterBody2D = bug_scene.instantiate()
 	
-	self.add_child(bug)
-	bug.global_position = position
+	bugs.add_child(bug)
+	bug.global_position = bug_position
 	
 
 
