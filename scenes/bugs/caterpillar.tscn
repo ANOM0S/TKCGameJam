@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://dpc1wbwtvuvii"]
 
-[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://scripts/bug.gd" id="1_7lqn1"]
-[ext_resource type="Texture2D" uid="uid://cd0j3d7m5bt6n" path="res://assets/bugs/Caterpillar/CAT_1.PNG" id="1_idke5"]
-[ext_resource type="Texture2D" uid="uid://csytg8fgta40b" path="res://assets/bugs/Caterpillar/CAT_2.PNG" id="2_7lqn1"]
-[ext_resource type="Texture2D" uid="uid://b3tpgexm1gdq5" path="res://assets/bugs/Caterpillar/CAT_3.PNG" id="3_2brgu"]
-[ext_resource type="Texture2D" uid="uid://ckb0c3se3w87u" path="res://assets/bugs/Caterpillar/CAT_4.PNG" id="4_cb1ad"]
-[ext_resource type="Texture2D" uid="uid://c70cd4bnxmfgw" path="res://assets/bugs/Caterpillar/CAT_STAND.PNG" id="5_tsnbl"]
+[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/Bug.gd" id="1_7lqn1"]
+[ext_resource type="Texture2D" uid="uid://cd0j3d7m5bt6n" path="res://Assets/bugs/Caterpillar/CAT_1.PNG" id="1_idke5"]
+[ext_resource type="Texture2D" uid="uid://csytg8fgta40b" path="res://Assets/bugs/Caterpillar/CAT_2.PNG" id="2_7lqn1"]
+[ext_resource type="Texture2D" uid="uid://b3tpgexm1gdq5" path="res://Assets/bugs/Caterpillar/CAT_3.PNG" id="3_2brgu"]
+[ext_resource type="Texture2D" uid="uid://ckb0c3se3w87u" path="res://Assets/bugs/Caterpillar/CAT_4.PNG" id="4_cb1ad"]
+[ext_resource type="Texture2D" uid="uid://c70cd4bnxmfgw" path="res://Assets/bugs/Caterpillar/CAT_STAND.PNG" id="5_tsnbl"]
+[ext_resource type="AudioStream" uid="uid://dgi0elx2fr1rl" path="res://Sounds/SquishSound.mp3" id="7_expjw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
 animations = [{
@@ -55,5 +56,8 @@ autoplay = "IDLE"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521361009]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_agab0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=299238956]
+stream = ExtResource("7_expjw")
 
 [node name="Timer" type="Timer" parent="." unique_id=614057527]

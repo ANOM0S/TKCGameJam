@@ -14,6 +14,7 @@ var current_state: state = state.IDLE
 @onready var timer: Timer = $Timer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var game_manager: Node = %GameManager
+@onready var squish_sfx: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
 func _ready() -> void:
@@ -46,16 +47,28 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		_choose_new_direction()
 
-
+# Funkcja zarządzająca usuwaniem robaka
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			# Dodatkowe sprawdzenie czy mamy cooldown
+			if not game_manager.can_catch():
+				return
+			# Jeżeli klikneliśmy to mamy cooldown
+			game_manager.start_cooldown()
+			# Użycie funkcji zebrania
 			collect()
 
 
 ## removes the bug and adds score in game manager
 func collect():
 	game_manager.add_point(bugType)
+	
+	# Lekko zmieniona wersja aby zapewnić, że zagra dzwięk
+	hide()
+	set_deferred("input_pickable", false)
+	squish_sfx.play()
+	await squish_sfx.finished
 	queue_free()
 
 

@@ -20,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Bg-Art" type="ColorRect" parent="MainMenu" unique_id=1853540020]
+[node name="Bg-Art-PH" type="ColorRect" parent="MainMenu" unique_id=1853540020]
 layout_mode = 2
 color = Color(0.42776978, 0.72696215, 0.34987575, 1)
 
@@ -40,6 +40,15 @@ theme_override_constants/separation = 80
 custom_minimum_size = Vector2(620, 200)
 layout_mode = 2
 color = Color(0, 0.75267696, 0.7528075, 1)
+
+[node name="LP" type="Button" parent="MainMenu/MarginContainer/VBoxContainer/Logo" unique_id=286932597]
+custom_minimum_size = Vector2(310, 75)
+layout_mode = 0
+offset_right = 621.0
+offset_bottom = 201.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "LOGO PLACEHOLDER"
 
 [node name="MenuOptions" type="VBoxContainer" parent="MainMenu/MarginContainer/VBoxContainer" unique_id=1850319310]
 layout_mode = 2

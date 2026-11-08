@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://Scripts/game_manager.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://Assets/temp/grass_prototype.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://b0hkm1fi1t7op" path="res://Scenes/Quota.tscn" id="2_fgofq"]
 [ext_resource type="PackedScene" uid="uid://dpc1wbwtvuvii" path="res://Scenes/bugs/caterpillar.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://Scenes/MenuUI.tscn" id="4_7lihs"]
-[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://Scenes/OnScreenUI.tscn" id="5_fgofq"]
+[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://scenes/OnScreenUI.tscn" id="5_fgofq"]
 [ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://Scenes/PauseUI.tscn" id="6_2irst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
@@ -15,25 +16,30 @@ size = Vector2(32, 816)
 
 [node name="Game" type="Node2D" unique_id=1310251541]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=479907304]
-
-[node name="MenuUI" parent="CanvasLayer" unique_id=1308173404 instance=ExtResource("4_7lihs")]
-visible = false
-
-[node name="OnScreenUI" parent="CanvasLayer" unique_id=878809337 instance=ExtResource("5_fgofq")]
-
-[node name="PauseUI" parent="CanvasLayer" unique_id=1519703332 instance=ExtResource("6_2irst")]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 1.0
-offset_bottom = 1.0
-
 [node name="GameManager" type="Node" parent="." unique_id=602831503]
 unique_name_in_owner = true
 script = ExtResource("1_lnu2h")
 
+[node name="Quota" parent="." unique_id=206868664 instance=ExtResource("2_fgofq")]
+offset_top = -1080.0
+offset_right = 1440.0
+
 [node name="Camera" type="Camera2D" parent="." unique_id=151029701]
+unique_name_in_owner = true
 anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera" unique_id=479907304]
+
+[node name="MenuUI" parent="Camera/CanvasLayer" unique_id=1308173404 instance=ExtResource("4_7lihs")]
+visible = false
+
+[node name="OnScreenUI" parent="Camera/CanvasLayer" unique_id=878809337 instance=ExtResource("5_fgofq")]
+
+[node name="PauseUI" parent="Camera/CanvasLayer" unique_id=1519703332 instance=ExtResource("6_2irst")]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="Ground" type="Sprite2D" parent="." unique_id=277430586]
 z_index = -1
@@ -61,4 +67,13 @@ position = Vector2(720, 312)
 shape = SubResource("RectangleShape2D_xrivr")
 
 [node name="Caterpillar" parent="." unique_id=1370927661 instance=ExtResource("2_yqjtg")]
+position = Vector2(496, 736)
+
+[node name="Caterpillar2" parent="." unique_id=1563081228 instance=ExtResource("2_yqjtg")]
+position = Vector2(496, 736)
+
+[node name="Caterpillar3" parent="." unique_id=463967660 instance=ExtResource("2_yqjtg")]
+position = Vector2(496, 736)
+
+[node name="Caterpillar4" parent="." unique_id=1405160349 instance=ExtResource("2_yqjtg")]
 position = Vector2(496, 736)
