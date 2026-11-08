@@ -1,15 +1,21 @@
 extends Control   
 
+var game_manager: Node
+
 # Połączenie z przyciskami i licznikiem robaków
 @onready var pause_button: TextureButton = %PauseButton
 @onready var go_to_quota: TextureButton = %GoToQuota
 @onready var count_label: Label = $OnScreenUI/Bugs/BugAmount
+@onready var time_label: Label = $OnScreenUI/DayIndicatior/Label
 
 func _ready() -> void:
 	pause_button.pressed.connect(_on_pause_pressed)
-	var gm := get_tree().current_scene.get_node("%GameManager")
-	gm.scored.connect(_on_scored)
+	game_manager = get_tree().current_scene.get_node("%GameManager")
+	game_manager.scored.connect(_on_scored)
 	count_label.text = str(0)
+
+func _process(delta: float) -> void:
+	time_label.text = str(int(game_manager.get_node("DayTimer").time_left))
 
 func _on_scored(amount: int) -> void:
 	count_label.text = str(amount)

@@ -160,10 +160,12 @@ mouse_filter = 2
 [node name="GameManager" type="Node" parent="." unique_id=602831503]
 unique_name_in_owner = true
 script = ExtResource("1_lnu2h")
+BASE_SPAWNRATE = 2.0
 
 [node name="SpawnTimer" type="Timer" parent="GameManager" unique_id=1076436596]
 
 [node name="DayTimer" type="Timer" parent="GameManager" unique_id=596601454]
+one_shot = true
 
 [node name="Camera" type="Camera2D" parent="." unique_id=151029701]
 anchor_mode = 0

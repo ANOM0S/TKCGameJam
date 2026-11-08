@@ -1,7 +1,6 @@
 extends Node
 
-@export var default_spawn_interval: float = 4.0
-@export var day_length: float = 10.0
+@export var day_length: float = 60.0
 @export var quota: int = 5
 @export var max_bug_count: int = 20
 
@@ -81,7 +80,7 @@ func _on_spawn_timer_timeout() -> void:
 	var bug_position: Vector2 = bug_spawner_area.global_position + random_offset
 	bug_spawner.spawn(Enums.type[Enums.type.keys()[randi() % Enums.type.size()]], bug_position)
 	
-	spawn_timer.wait_time = BASE_SPAWNRATE * get_bug_spawnrate()
+	spawn_timer.wait_time = get_bug_spawnrate()
 	spawn_timer.start()
 
 
@@ -134,7 +133,6 @@ func collect_random() -> void:
 func _on_day_timer_timeout() -> void:
 	if on_screen_ui.in_quota == false:
 		on_screen_ui.swapScreen()
-	day_timer.stop()
 	swapScreenButton.disabled = true
 
 func _pay_a_quota() -> void:
