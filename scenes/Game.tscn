@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ceourlne88r2k"]
 
+[ext_resource type="Script" uid="uid://dxl34nynarfta" path="res://scenes/game.gd" id="1_0bq3a"]
+[ext_resource type="AudioStream" uid="uid://cjdggehpf6nft" path="res://assets/music/music.mp3" id="1_jhsr3"]
 [ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://scripts/function_nodes/game_manager.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://assets/temp/grass_prototype.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://scenes/MenuUI.tscn" id="4_7lihs"]
@@ -114,6 +116,11 @@ size = Vector2(32, 816)
 size = Vector2(1184, 512)
 
 [node name="Game" type="Node2D" unique_id=1310251541]
+script = ExtResource("1_0bq3a")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=793071558]
+stream = ExtResource("1_jhsr3")
+volume_db = 3.0
 
 [node name="BackGround" type="Sprite2D" parent="." unique_id=1288495349]
 position = Vector2(720, 0)
