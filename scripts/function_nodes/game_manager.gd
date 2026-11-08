@@ -6,6 +6,10 @@ extends Node
 var scores = { }
 
 signal scored(amount: int, bug: Enums.type)
+signal cooldown_started(duration: float)   # DODANE
+
+const BASE_COOLDOWN := 1.0                 # DODANE
+var cooldown_left := 0.0                   # DODANE
 
 @onready var bug_spawner: Node2D = %BugSpawner
 @onready var bug_spawner_area: CollisionShape2D = %BugSpawner/Area2D/CollisionShape2D
@@ -20,6 +24,8 @@ func _ready() -> void:
 	spawn_timer.start()
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 
+func _process(delta: float) -> void:       # DODANE
+	cooldown_left = maxf(cooldown_left - delta, 0.0)
 
 func _on_spawn_timer_timeout() -> void:
 	var rect = bug_spawner_area.shape as RectangleShape2D
@@ -38,3 +44,28 @@ func add_point(bug_type: Enums.type) -> void:
 	scores[bug_name] += 1
 	
 	scored.emit(scores[bug_name], bug_type)
+	
+	# --- DODANE: cooldown klikania ---
+func can_catch() -> bool:
+	return cooldown_left <= 0.0
+
+func start_cooldown() -> void:
+	cooldown_left = BASE_COOLDOWN
+	cooldown_started.emit(cooldown_left)
+
+
+# --- DODANE: reset i zapis ---
+func reset() -> void:
+	for bug_name in Enums.type:
+		scores[bug_name] = 0
+
+func get_save_data() -> Dictionary:
+	return {"scores": scores}
+
+func apply_save_data(data: Dictionary) -> void:
+	reset()
+	var saved: Dictionary = data.get("scores", {})
+	for bug_name in saved:
+		if scores.has(bug_name):
+			scores[bug_name] = int(saved[bug_name])
+			scored.emit(scores[bug_name], Enums.type[bug_name])

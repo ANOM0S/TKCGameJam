@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e5i384mtewod"
-path="res://.godot/imported/CATERPILAR_STAND.png-67fdc4a973eedbe2509dcf0853b5732b.ctex"
+path="res://.godot/imported/CATERPILAR_STAND.png-2de156eb417f5b79414260abd6e7c78d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp/CATERPILAR_STAND.png"
-dest_files=["res://.godot/imported/CATERPILAR_STAND.png-67fdc4a973eedbe2509dcf0853b5732b.ctex"]
+source_file="res://Assets/temp/CATERPILAR_STAND.png"
+dest_files=["res://.godot/imported/CATERPILAR_STAND.png-2de156eb417f5b79414260abd6e7c78d.ctex"]
 
 [params]
 

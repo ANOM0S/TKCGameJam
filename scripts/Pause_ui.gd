@@ -1,8 +1,10 @@
 extends Node
 
+# Ścieżki do scen
 const MENU_SCENE := "res://scenes/MenuUI.tscn"
 const SETTINGS_SCENE := "res://SettingsUI.tscn"
 
+# Powiązania z przyciskami
 @onready var panel: Control = $MainMenu
 @onready var resume_btn: Button = $MainMenu/VBoxContainer/VBoxContainer/Resume
 @onready var save_btn: Button = $MainMenu/VBoxContainer/VBoxContainer/Save
@@ -26,9 +28,9 @@ func close() -> void:
 
 func _on_save() -> void:
 	SaveManager.save_requested.emit()
-	save_btn.text = "Zapisano!"
+	save_btn.text = "Saved!"
 	await get_tree().create_timer(1.0).timeout
-	save_btn.text = "Zapisz"
+	save_btn.text = "Save"
 
 func _on_quit() -> void:
 	get_tree().paused = false
@@ -41,6 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			open()
 
+# To dalej ustawienia i ich nie ma xD
 func _on_settings() -> void:
 	if ResourceLoader.exists(SETTINGS_SCENE):
 		get_tree().change_scene_to_file(SETTINGS_SCENE)

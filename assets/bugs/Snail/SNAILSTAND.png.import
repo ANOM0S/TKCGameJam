@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fyd5aqgfw2mp"
-path="res://.godot/imported/SNAILSTAND.png-b8b603977a3f5220f7a376266cbeb496.ctex"
+path="res://.godot/imported/SNAILSTAND.png-4e1cc0e5a5d48c50d2f48792fba6cbe2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bugs/Snail/SNAILSTAND.png"
-dest_files=["res://.godot/imported/SNAILSTAND.png-b8b603977a3f5220f7a376266cbeb496.ctex"]
+source_file="res://Assets/bugs/Snail/SNAILSTAND.png"
+dest_files=["res://.godot/imported/SNAILSTAND.png-4e1cc0e5a5d48c50d2f48792fba6cbe2.ctex"]
 
 [params]
 

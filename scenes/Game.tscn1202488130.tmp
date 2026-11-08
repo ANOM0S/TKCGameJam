@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://ceourlne88r2k"]
+
+[ext_resource type="Script" uid="uid://n1fw6fb6iqqg" path="res://Scripts/function_nodes/game_manager.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://Assets/temp/grass_prototype.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://Scenes/MenuUI.tscn" id="4_7lihs"]
+[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://Scenes/OnScreenUI.tscn" id="5_fgofq"]
+[ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://Scenes/PauseUI.tscn" id="6_2irst"]
+[ext_resource type="Script" uid="uid://dsy5qpepkp1j3" path="res://Scripts/function_nodes/bug_spawner.gd" id="6_u5sy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(1440, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(32, 816)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(1184, 512)
+
+[node name="Game" type="Node2D" unique_id=1310251541]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=479907304]
+visible = false
+
+[node name="MenuUI" parent="CanvasLayer" unique_id=1308173404 instance=ExtResource("4_7lihs")]
+visible = false
+
+[node name="OnScreenUI" parent="CanvasLayer" unique_id=878809337 instance=ExtResource("5_fgofq")]
+
+[node name="PauseUI" parent="CanvasLayer" unique_id=1519703332 instance=ExtResource("6_2irst")]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="GameManager" type="Node" parent="." unique_id=602831503]
+unique_name_in_owner = true
+script = ExtResource("1_lnu2h")
+default_spawn_interval = 1.0
+
+[node name="SpawnTimer" type="Timer" parent="GameManager" unique_id=1076436596]
+
+[node name="Camera" type="Camera2D" parent="." unique_id=151029701]
+anchor_mode = 0
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=277430586]
+z_index = -1
+texture = ExtResource("1_yqjtg")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1440, 1080)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=646394969]
+
+[node name="SouthCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=681610687]
+position = Vector2(720, 1096)
+shape = SubResource("RectangleShape2D_xrivr")
+debug_color = Color(0.98442906, 0.12495018, 0, 0.41960785)
+
+[node name="WestCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1437322045]
+position = Vector2(-16, 704)
+shape = SubResource("RectangleShape2D_yqjtg")
+debug_color = Color(0.98442906, 0.12495018, 0, 0.41960785)
+
+[node name="EastCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=2120187376]
+position = Vector2(1456, 704)
+shape = SubResource("RectangleShape2D_yqjtg")
+debug_color = Color(0.98442906, 0.12495018, 0, 0.41960785)
+
+[node name="NorthCollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=506722386]
+position = Vector2(720, 312)
+shape = SubResource("RectangleShape2D_xrivr")
+debug_color = Color(0.98442906, 0.12495018, 0, 0.41960785)
+
+[node name="BugSpawner" type="Node2D" parent="." unique_id=1077716118]
+unique_name_in_owner = true
+script = ExtResource("6_u5sy4")
+
+[node name="Area2D" type="Area2D" parent="BugSpawner" unique_id=1384695606]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BugSpawner/Area2D" unique_id=1336290604]
+position = Vector2(720, 704)
+shape = SubResource("RectangleShape2D_13qdw")
+debug_color = Color(0.4147871, 0.59687465, 0.2999056, 0.41960785)

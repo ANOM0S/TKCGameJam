@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ffunodnaejem"
-path="res://.godot/imported/WORM5.png-8f136f034da681c4d0f0968078b8c857.ctex"
+path="res://.godot/imported/WORM5.png-729e6f1acb7b47714659faff8321648e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bugs/Earthworm/WORM5.png"
-dest_files=["res://.godot/imported/WORM5.png-8f136f034da681c4d0f0968078b8c857.ctex"]
+source_file="res://Assets/bugs/Earthworm/WORM5.png"
+dest_files=["res://.godot/imported/WORM5.png-729e6f1acb7b47714659faff8321648e.ctex"]
 
 [params]
 

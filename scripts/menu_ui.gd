@@ -1,8 +1,10 @@
 extends Control
 
+# Referencje do scen
 const GAME_SCENE := "res://Scenes/Game.tscn"
 const SETTINGS_SCENE := "res://SettingsUI.tscn"
 
+# Połączenie z przyciskami
 @onready var options := $MainMenu/MarginContainer/VBoxContainer/MenuOptions
 @onready var new_game_btn: Button = options.get_node("NewGame")
 @onready var continue_btn: Button = options.get_node("Continue")
@@ -16,14 +18,17 @@ func _ready() -> void:
 	settings_btn.pressed.connect(_on_settings)
 	exit_btn.pressed.connect(get_tree().quit)
 
+# Zaczynamy nową grę
 func _on_new_game() -> void:
 	SaveManager.load_on_start = false
 	get_tree().change_scene_to_file(GAME_SCENE)
 
+# Wczytywanie gry
 func _on_continue() -> void:
 	SaveManager.load_on_start = true
 	get_tree().change_scene_to_file(GAME_SCENE)
 
+# Ustawienia których jeszcze nie mamy :p
 func _on_settings() -> void:
 	if ResourceLoader.exists(SETTINGS_SCENE):
 		get_tree().change_scene_to_file(SETTINGS_SCENE)
