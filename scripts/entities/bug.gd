@@ -64,19 +64,13 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 
 ## removes the bug and adds score in game manager
 func collect():
-<<<<<<< Updated upstream
-=======
 	# Lekko zmieniona wersja aby zapewnić, że zagra dzwięk
->>>>>>> Stashed changes
 	hide()
 	set_deferred("input_pickable", false)
 	squish_sfx.play()
 	await squish_sfx.finished
 
-<<<<<<< Updated upstream
 	game_manager.add_point()
-=======
-	game_manager.add_point(bug_type)
 	
 	var duplication_chance = game_manager.get_duplication_chance()
 	
@@ -84,7 +78,6 @@ func collect():
 	if randf() < duplication_chance:
 		return
 	
->>>>>>> Stashed changes
 	queue_free()
 
 

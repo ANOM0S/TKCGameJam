@@ -1,29 +1,17 @@
 extends Node
 
-<<<<<<< Updated upstream
-
 @export var default_spawn_interval: float = 4.0
 @export var day_length: float = 10.0
 @export var quota: int = 5
-=======
 @export var max_bug_count: int = 20
->>>>>>> Stashed changes
 
 var score : int = 0
 
-<<<<<<< Updated upstream
 signal scored(amount: int)
 signal cooldown_started(duration: float)
 
-
 const ENDGAME_SCENE := "res://Scenes/Endgame.tscn"
-const BASE_COOLDOWN := 1.0
-var cooldown_left := 0.0
-=======
 var upgrade_levels = { }
-
-signal scored(amount: int)
-signal cooldown_started(duration: float)   # DODANE
 
 @export var BASE_COOLDOWN := 1.0
 const MIN_COOLDOWN := 0.1
@@ -46,7 +34,6 @@ const DUPLICATION_CHANCE_MULTIPLIER := 0.8
 const BASE_MULTIPLICATION_CHANCE := 0.1
 const MAX_MULTIPLICATION_CHANCE := 0.50
 const MULTIPLICATION_CHANCE_MULTIPLIER := 0.8
->>>>>>> Stashed changes
 
 @onready var bug_spawner: Node2D = %BugSpawner
 @onready var bug_spawner_area: CollisionShape2D = %BugSpawner/Area2D/CollisionShape2D
@@ -58,12 +45,7 @@ const MULTIPLICATION_CHANCE_MULTIPLIER := 0.8
 
 
 func _ready() -> void:
-<<<<<<< Updated upstream
 	score = 0
-=======
-	for bug_type in Enums.type:
-		scores[bug_type] = 0
->>>>>>> Stashed changes
 	
 	for upgrade_name in Enums.upgrade:
 		upgrade_levels[upgrade_name] = 0
@@ -155,8 +137,6 @@ func _on_day_timer_timeout() -> void:
 	day_timer.stop()
 	swapScreenButton.disabled = true
 
-<<<<<<< Updated upstream
-
 func _pay_a_quota() -> void:
 	if score > quota:
 		score -= quota
@@ -170,19 +150,11 @@ func _pay_a_quota() -> void:
 
 # Dodawanie wartości do złapanych ptaków
 func add_point() -> void:
-	score += 1
+	score += (1 + get_upgrade_level(Enums.upgrade.BUG_PLUS_ONE)) * (2 if randf() < get_multiplication_chance() else 1)
+	
 	scored.emit(score)
-
+	
 # Zarządzanie opóźnieniem klikania
-=======
-func add_point(bug_type: Enums.type) -> void:
-	var bug_name = Enums.type.find_key(bug_type)
-	scores[bug_name] += (1 + get_upgrade_level(Enums.upgrade.BUG_PLUS_ONE)) * (2 if randf() < get_multiplication_chance() else 1)
-	
-	scored.emit(scores[bug_name], bug_type)
-	
-	# --- cooldown klikania ---
->>>>>>> Stashed changes
 func can_catch() -> bool:
 	return cooldown_left <= 0.0
 

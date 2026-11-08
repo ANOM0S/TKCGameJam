@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://cig2l7tnrjgch"]
 
-<<<<<<< Updated upstream
-[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_aflcv"]
-=======
 [ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://scripts/entities/bug.gd" id="1_aflcv"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://bkq64nqo8lwfp" path="res://assets/bugs/Moth/MOTH1.png" id="2_oy6mh"]
 [ext_resource type="Texture2D" uid="uid://b7dfplqorswpa" path="res://assets/bugs/Moth/MOTH2.png" id="3_aflcv"]
 [ext_resource type="Texture2D" uid="uid://daenxoeecy4pc" path="res://assets/bugs/Moth/MOTH3.png" id="4_y5wv3"]
