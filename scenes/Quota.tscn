@@ -9,9 +9,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=877808425]
-custom_minimum_size = Vector2(1440, 1080)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.33774444, 0.28106603, 0.16162723, 1)
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=349038456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

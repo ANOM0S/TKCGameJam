@@ -15,6 +15,14 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_v8uxx")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1296440238]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 35.0
+offset_right = 838.0
+offset_bottom = 143.0
+color = Color(0.15294118, 0.15294118, 0.15294118, 0.4509804)
+
 [node name="OnScreenUI" type="MarginContainer" parent="." unique_id=1722721736]
 layout_mode = 1
 anchors_preset = 15
@@ -23,10 +31,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
 
 [node name="GoToQuota" type="Button" parent="OnScreenUI" unique_id=905253125]
 unique_name_in_owner = true

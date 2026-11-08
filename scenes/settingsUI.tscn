@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://du42bbebsrsb4"]
+
+[ext_resource type="Script" uid="uid://bp67sk55mg6wa" path="res://Scripts/settings_ui.gd" id="1_63gnq"]
+
+[node name="ControlSettingsUI" type="Control" unique_id=1909112315]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_63gnq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1841362842]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MasterSlider" type="HSlider" parent="VBoxContainer" unique_id=18794864]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="Master" type="Label" parent="VBoxContainer/MasterSlider" unique_id=1456947926]
+layout_mode = 0
+offset_left = -65.0
+offset_top = 15.0
+offset_right = -10.0
+offset_bottom = 38.0
+text = "Master"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer" unique_id=726952083]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="Music" type="Label" parent="VBoxContainer/MusicSlider" unique_id=1367726591]
+layout_mode = 0
+offset_left = -65.0
+offset_top = 15.0
+offset_right = -10.0
+offset_bottom = 38.0
+text = "Music"
+
+[node name="SfxSlider" type="HSlider" parent="VBoxContainer" unique_id=487051736]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="Sfx" type="Label" parent="VBoxContainer/SfxSlider" unique_id=1715213302]
+layout_mode = 0
+offset_left = -65.0
+offset_top = 15.0
+offset_right = -10.0
+offset_bottom = 38.0
+text = "Sfx"
+
+[node name="FullscreenCheck" type="CheckBox" parent="VBoxContainer" unique_id=628611707]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Fullscreen" type="Label" parent="VBoxContainer/FullscreenCheck" unique_id=247685922]
+layout_mode = 0
+offset_left = -83.0
+offset_top = -1.0
+offset_right = -4.0
+offset_bottom = 22.0
+text = "Fullscreen"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1959518288]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Save settings"

@@ -19,6 +19,7 @@ config/icon="res://Assets/temp/default_icon.svg"
 
 SaveManager="*uid://b6711qacr1uox"
 Enums="*uid://dgoyiidt1xvd4"
+Settings="*uid://cpk2dtcv63g6c"
 
 [display]
 
@@ -26,7 +27,7 @@ window/size/viewport_width=1440
 window/size/viewport_height=1080
 window/size/resizable=false
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 
 [editor]
 

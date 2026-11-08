@@ -15,16 +15,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_owitj")
 
-[node name="Background" type="ColorRect" parent="." unique_id=388695368]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.26413724, 0.4236925, 0.21025395, 1)
-
 [node name="ShopMenu" type="MarginContainer" parent="." unique_id=1933900836]
 custom_minimum_size = Vector2(1440, 1080)
 layout_mode = 1

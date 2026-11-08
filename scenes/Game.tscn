@@ -4,9 +4,36 @@
 [ext_resource type="Texture2D" uid="uid://l325emypsty4" path="res://Assets/temp/grass_prototype.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://h3ebetipjyfd" path="res://Scenes/MenuUI.tscn" id="4_7lihs"]
 [ext_resource type="PackedScene" uid="uid://b0hkm1fi1t7op" path="res://Scenes/Quota.tscn" id="4_fgofq"]
-[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://scenes/OnScreenUI.tscn" id="5_fgofq"]
+[ext_resource type="Shader" uid="uid://b5gl1lio7abda" path="res://Scripts/OldFilm.gdshader" id="5_2irst"]
+[ext_resource type="PackedScene" uid="uid://cl04guwdih0nf" path="res://Scenes/OnScreenUI.tscn" id="5_fgofq"]
 [ext_resource type="PackedScene" uid="uid://c45vegg7r15qh" path="res://Scenes/PauseUI.tscn" id="6_2irst"]
 [ext_resource type="Script" uid="uid://dsy5qpepkp1j3" path="res://Scripts/function_nodes/bug_spawner.gd" id="6_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://d1t6afcucvky3" path="res://Assets/background/grass/trawa1.png" id="8_3so38"]
+[ext_resource type="Texture2D" uid="uid://cyn7mco5am8ph" path="res://Assets/background/grass/trawa2.png" id="9_3cx6b"]
+[ext_resource type="Texture2D" uid="uid://vlutr61txkqf" path="res://Assets/background/tlo bez trawy.png" id="9_bf53h"]
+[ext_resource type="Texture2D" uid="uid://drl726ms7mgfg" path="res://Assets/background/grass/trawa3.png" id="10_wxwew"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w0lky"]
+shader = ExtResource("5_2irst")
+shader_parameter/projector_power = 0.5
+shader_parameter/vignette_param = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0lky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3so38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3cx6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wxwew")
+}],
+"loop": 2,
+"name": &"Grass",
+"speed": 7.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(1440, 32)
@@ -36,6 +63,13 @@ offset_bottom = 1.0
 offset_top = -1080.0
 offset_bottom = -1080.0
 
+[node name="OldMovieShader" type="ColorRect" parent="CanvasLayer" unique_id=491565044]
+visible = false
+material = SubResource("ShaderMaterial_w0lky")
+offset_right = 1438.0
+offset_bottom = 1082.0
+mouse_filter = 2
+
 [node name="GameManager" type="Node" parent="." unique_id=602831503]
 unique_name_in_owner = true
 script = ExtResource("1_lnu2h")
@@ -46,7 +80,19 @@ default_spawn_interval = 1.0
 [node name="Camera" type="Camera2D" parent="." unique_id=151029701]
 anchor_mode = 0
 
+[node name="TloBezTrawy" type="Sprite2D" parent="." unique_id=1288495349]
+position = Vector2(720, 0)
+texture = ExtResource("9_bf53h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=390621653]
+position = Vector2(719, 36)
+sprite_frames = SubResource("SpriteFrames_w0lky")
+animation = &"Grass"
+autoplay = "Grass"
+frame_progress = 0.6888086
+
 [node name="Ground" type="Sprite2D" parent="." unique_id=277430586]
+visible = false
 z_index = -1
 texture = ExtResource("1_yqjtg")
 centered = false

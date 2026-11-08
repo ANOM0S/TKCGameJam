@@ -45,27 +45,10 @@ func add_point(bug_type: Enums.type) -> void:
 	
 	scored.emit(scores[bug_name], bug_type)
 	
-	# --- DODANE: cooldown klikania ---
+	# --- cooldown klikania ---
 func can_catch() -> bool:
 	return cooldown_left <= 0.0
 
 func start_cooldown() -> void:
 	cooldown_left = BASE_COOLDOWN
 	cooldown_started.emit(cooldown_left)
-
-
-# --- DODANE: reset i zapis ---
-func reset() -> void:
-	for bug_name in Enums.type:
-		scores[bug_name] = 0
-
-func get_save_data() -> Dictionary:
-	return {"scores": scores}
-
-func apply_save_data(data: Dictionary) -> void:
-	reset()
-	var saved: Dictionary = data.get("scores", {})
-	for bug_name in saved:
-		if scores.has(bug_name):
-			scores[bug_name] = int(saved[bug_name])
-			scored.emit(scores[bug_name], Enums.type[bug_name])
