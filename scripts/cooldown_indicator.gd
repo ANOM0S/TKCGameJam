@@ -16,6 +16,9 @@ var running := false
 
 
 func _ready() -> void:
+	if game_manager == null:
+		push_warning("cooldown_indicator: nie znaleziono %GameManager")
+		return
 	game_manager.cooldown_started.connect(_on_started)
 
 func _on_started(d: float) -> void:

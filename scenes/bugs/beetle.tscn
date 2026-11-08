@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://pk0k11updevd"]
+
+[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_skltu"]
+[ext_resource type="Texture2D" uid="uid://bntxnfrk6g23j" path="res://Assets/bugs/Beetle/BEETLESTAND.png" id="2_skltu"]
+[ext_resource type="Texture2D" uid="uid://c1f4lfqhgk5kw" path="res://Assets/bugs/Beetle/BEETLE1.png" id="3_skltu"]
+[ext_resource type="Texture2D" uid="uid://m3ihmmwo2jr8" path="res://Assets/bugs/Beetle/BEETLE2.png" id="4_32qc3"]
+[ext_resource type="Texture2D" uid="uid://dm5juj3sap1uf" path="res://Assets/bugs/Beetle/BEETLE3.png" id="5_sxa8u"]
+[ext_resource type="Texture2D" uid="uid://vo0fcq8p6c4m" path="res://Assets/bugs/Beetle/BEETLE4.png" id="6_gbhog"]
+[ext_resource type="AudioStream" uid="uid://dgi0elx2fr1rl" path="res://Sounds/SquishSound.mp3" id="7_uj3l5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_skltu")
+}],
+"loop": 1,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_skltu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_32qc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sxa8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gbhog")
+}],
+"loop": 1,
+"name": &"MOVE",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agab0"]
+radius = 80.0
+height = 272.0
+
+[node name="Beetle" type="CharacterBody2D" unique_id=1370927661]
+collision_layer = 2
+input_pickable = true
+motion_mode = 1
+script = ExtResource("1_skltu")
+bug_type = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1232545983]
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"MOVE"
+autoplay = "IDLE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521361009]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_agab0")
+
+[node name="Timer" type="Timer" parent="." unique_id=614057527]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=574284636]
+stream = ExtResource("7_uj3l5")

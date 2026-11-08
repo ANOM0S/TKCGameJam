@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cl04guwdih0nf"]
 
 [ext_resource type="Script" uid="uid://gvj1vds64n0y" path="res://Scripts/on_screen_ui.gd" id="1_v8uxx"]
-[ext_resource type="PackedScene" uid="uid://nr8hvrvmpdno" path="res://scenes/bugsAmounts.tscn" id="2_niobk"]
+[ext_resource type="PackedScene" uid="uid://nr8hvrvmpdno" path="res://Scenes/bugsAmounts.tscn" id="2_niobk"]
 [ext_resource type="Script" uid="uid://cdejikrw68177" path="res://Scripts/cooldown_indicator.gd" id="3_uy7sv"]
-[ext_resource type="Script" uid="uid://ds8hyb0pxb380" path="res://Scripts/day_timer.gd" id="4_bgjqq"]
 
 [node name="OnScreenUI2" type="Control" unique_id=878809337]
 custom_minimum_size = Vector2(1440, 1080)
@@ -63,7 +62,6 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 mouse_filter = 2
-script = ExtResource("4_bgjqq")
 
 [node name="Label" type="Label" parent="OnScreenUI/DayIndicatior" unique_id=1360158990]
 layout_mode = 1

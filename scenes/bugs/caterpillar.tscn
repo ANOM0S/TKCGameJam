@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dpc1wbwtvuvii"]
 
-[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/Bug.gd" id="1_7lqn1"]
+[ext_resource type="Script" uid="uid://dg3tes73hm02r" path="res://Scripts/entities/bug.gd" id="1_7lqn1"]
 [ext_resource type="Texture2D" uid="uid://cd0j3d7m5bt6n" path="res://Assets/bugs/Caterpillar/CAT_1.PNG" id="1_idke5"]
 [ext_resource type="Texture2D" uid="uid://csytg8fgta40b" path="res://Assets/bugs/Caterpillar/CAT_2.PNG" id="2_7lqn1"]
 [ext_resource type="Texture2D" uid="uid://b3tpgexm1gdq5" path="res://Assets/bugs/Caterpillar/CAT_3.PNG" id="3_2brgu"]
@@ -37,14 +37,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agab0"]
-radius = 56.0
+radius = 48.0
 height = 192.0
 
 [node name="Caterpillar" type="CharacterBody2D" unique_id=1370927661]
+collision_layer = 2
 input_pickable = true
 motion_mode = 1
 script = ExtResource("1_7lqn1")
-bugType = 2
+bug_type = 2
 speed = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1232545983]
@@ -57,7 +58,7 @@ autoplay = "IDLE"
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_agab0")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=299238956]
-stream = ExtResource("7_expjw")
-
 [node name="Timer" type="Timer" parent="." unique_id=614057527]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1045436919]
+stream = ExtResource("7_expjw")

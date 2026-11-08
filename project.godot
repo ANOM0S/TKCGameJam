@@ -18,7 +18,6 @@ config/icon="res://Assets/temp/default_icon.svg"
 [autoload]
 
 SaveManager="*uid://b6711qacr1uox"
-Upgrades="*uid://udogfg7efm21"
 Enums="*uid://dgoyiidt1xvd4"
 
 [display]
@@ -33,6 +32,11 @@ window/stretch/aspect="expand"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[layer_names]
+
+2d_physics/layer_1="Env"
+2d_physics/layer_2="Bugs"
 
 [physics]
 
